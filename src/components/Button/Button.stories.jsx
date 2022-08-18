@@ -12,3 +12,11 @@ export const Success = () => <Button variant="success">Success</Button>;
 export const Danger = () => <Button variant="danger">Danger</Button>;
 
 Primary.storyName = "Primary button";
+
+const Template = (args) => <Button {...args} />;
+
+export const PrimaryA = Template.bind({});
+PrimaryA.args = {
+  variant: "primary",
+  children: "With Template",
+};
