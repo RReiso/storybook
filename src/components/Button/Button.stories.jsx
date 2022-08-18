@@ -4,6 +4,10 @@ import React from "react";
 export default {
   title: "form/Button",
   component: Button,
+  // args set here will be applied to all stories
+  // args: {
+  //   children: "This  will be applied to all stories",
+  // },
 };
 
 export const Primary = () => <Button variant="primary">Primary</Button>;
@@ -19,4 +23,11 @@ export const PrimaryA = Template.bind({});
 PrimaryA.args = {
   variant: "primary",
   children: "With Template",
+};
+
+// extend args of previous stories
+export const PrimaryB = Template.bind({});
+PrimaryB.args = {
+  ...PrimaryA.args,
+  children: "PrimaryB",
 };
