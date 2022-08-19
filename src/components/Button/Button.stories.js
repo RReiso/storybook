@@ -1,9 +1,11 @@
 import Button from "./Button";
 import React from "react";
+import Center from "./Center/Center";
 
 export default {
   title: "form/Button",
   component: Button,
+  decorators: [(story) => <Center>{story()}</Center>],
   // args set here will be applied to all stories
   // args: {
   //   children: "This  will be applied to all stories",
