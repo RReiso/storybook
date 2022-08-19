@@ -1,3 +1,9 @@
+import { addDecorator } from "@storybook/react";
+import React from "react";
+import Margin from "../src/components/Margin/Margin";
+
+addDecorator((story) => <Margin>{story()}</Margin>);
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
