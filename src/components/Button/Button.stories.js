@@ -1,6 +1,6 @@
 import Button from "./Button";
 import React from "react";
-import Center from "./Center/Center";
+import Center from "../Center/Center";
 
 export default {
   title: "form/Button",
@@ -10,6 +10,10 @@ export default {
   // args: {
   //   children: "This  will be applied to all stories",
   // },
+
+  argTypes: {
+    onClick: { action: "clicked" },
+  },
 };
 
 export const Primary = () => <Button variant="primary">Primary</Button>;
